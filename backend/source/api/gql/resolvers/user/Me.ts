@@ -1,5 +1,5 @@
 import { Query, Resolver, Ctx, UseMiddleware } from "type-graphql";
-import { MyContext } from "../../../common/types/MyContext";
+import { MyContext } from "../../../../common/types/MyContext";
 import { User } from "../../entities/User";
 import { isAuth } from "../../middleware/isAuth";
 import { logger } from "../../middleware/logger";

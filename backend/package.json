@@ -1,11 +1,13 @@
 {
-  "name": "backend",
+  "name": "typegraphql",
   "version": "1.0.0",
   "description": "",
   "main": "./build/index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node source/index.ts",
-    "start": "tsc && ts-node ."
+    "start": "tsc && ts-node .",
+    "db-setup": "ts-node source/test/setup.ts",
+    "test": "npm run db-setup && jest"
   },
   "keywords": [],
   "author": "",
@@ -35,11 +37,15 @@
     "@types/express-session": "^1.17.0",
     "@types/graphql": "^14.5.0",
     "@types/ioredis": "^4.17.3",
+    "@types/jest": "^26.0.10",
     "@types/node": "^14.0.27",
     "@types/nodemailer": "^6.4.0",
     "@types/uuid": "^8.3.0",
+    "jest": "^26.4.0",
     "nodemon": "^2.0.4",
+    "ts-jest": "^26.2.0",
     "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.57",
     "typescript": "^3.9.7"
   }
 }

@@ -1,10 +1,10 @@
 import { Resolver, Mutation, Arg } from "type-graphql";
 import bycrypt from 'bcryptjs';
 import { User } from "../../entities/User";
-import { redis } from "../../redis";
-import { createUrl } from "../../common/utils/createUrl";
-import { sendEmail } from "../../common/utils/sendEmail";
-import { forgotPasswordPrefix } from "../../common/RedisPrefixes";
+import { redis } from "../../../database/redis";
+import { createUrl } from "../../../common/utils/createUrl";
+import { sendEmail } from "../../../common/utils/sendEmail";
+import { forgotPasswordPrefix } from "../../../common/RedisPrefixes";
 import { ForgotPasswordInput } from "./forgot-passwrod/ForgotPasswordInput";
 
 @Resolver()

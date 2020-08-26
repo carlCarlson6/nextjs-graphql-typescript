@@ -3,17 +3,17 @@ import { ApolloServer } from 'apollo-server-express';
 import Express from 'express';
 import { buildSchema } from 'type-graphql';
 import { createConnection } from 'typeorm';
-import { RegisterResolver } from './resolvers/user/Register';
+import { RegisterResolver } from './gql/resolvers/user/Register';
 import session from 'express-session';
 import connectRedis from 'connect-redis';
-import { redis } from './redis';
+import { redis } from './database/redis';
 import cors from 'cors';
-import { LoginResolver } from './resolvers/user/Login';
+import { LoginResolver } from './gql/resolvers/user/Login';
 import { Context } from 'vm';
-import { MeResolver } from './resolvers/user/Me';
-import { ConfirmUserResolver } from './resolvers/user/ConfirmUser';
-import { ForgotPasswordResolver } from './resolvers/user/ForgotPassword';
-import { LogoutResolver } from './resolvers/user/Logout';
+import { MeResolver } from './gql/resolvers/user/Me';
+import { ConfirmUserResolver } from './gql/resolvers/user/ConfirmUser';
+import { ForgotPasswordResolver } from './gql/resolvers/user/ForgotPassword';
+import { LogoutResolver } from './gql/resolvers/user/Logout';
 
 const main = async (): Promise<void> => {
     await createConnection();

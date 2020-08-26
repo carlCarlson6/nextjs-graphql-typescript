@@ -4,9 +4,9 @@ import { User } from "../../entities/User";
 import {RegisterInput} from "./register/RegisterInput";
 import { isAuth } from "../../middleware/isAuth";
 import { logger } from "../../middleware/logger";
-import { sendEmail } from "../../common/utils/sendEmail";
-import { createUrl } from "../../common/utils/createUrl";
-import { confirmUserPrefix } from "../../common/RedisPrefixes";
+import { sendEmail } from "../../../common/utils/sendEmail";
+import { createUrl } from "../../../common/utils/createUrl";
+import { confirmUserPrefix } from "../../../common/RedisPrefixes";
 
 
 @Resolver()

@@ -1,5 +1,5 @@
 import {v4 as createIdV4} from 'uuid';
-import { redis } from '../../redis';
+import { redis } from '../../database/redis';
 
 export const createUrl = async (userId: number, path: string, prefix: string): Promise<string> => {
     const token = prefix+createIdV4();

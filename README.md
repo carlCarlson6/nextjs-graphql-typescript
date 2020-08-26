@@ -32,6 +32,6 @@ at ./ create file ormconfig.json with the following code:
 
 ======================================================
 
-get redis from [here](https://github.com/ServiceStack/redis-windows) 3rd option
+get redis from [here](https://github.com/ServiceStack/redis-windows) (3rd option)
 
 run by executing the redis-server.exe file

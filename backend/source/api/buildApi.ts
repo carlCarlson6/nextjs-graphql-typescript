@@ -7,7 +7,9 @@ import { RedisStore } from 'connect-redis';
 
 export const buildApi = (RedisStore: RedisStore): Express => {
     const app = express();
+
     app.use(cors({credentials:true, origin:'http://localhost:3000'}));
+    
     app.use(session({
         store: new RedisStore({client: redis as any}),
         name: "rdscookie",

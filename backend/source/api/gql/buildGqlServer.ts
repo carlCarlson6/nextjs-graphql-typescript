@@ -4,7 +4,7 @@ import { ApolloServer } from 'apollo-server-express';
 import { MyContext } from '../../common/types/MyContext';
 
 
-export const buildGqlServer = async () => {
+export const buildGqlServer = async (): Promise<ApolloServer> => {
     const schema = await buildSchema({
         resolvers: [
             ConfirmUser,
